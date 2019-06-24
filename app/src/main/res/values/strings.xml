@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">kicker.android</string>
+    <string name="app_name">Aventica Kicker</string>
+
+    <!--Login Screen-->
+    <string name="login_sing_in_btn">Sing In</string>
+    <string name="login_sing_up_btn">Sing Up</string>
+    <string name="login_username_hint">Username</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_confirm_password">Confirm password</string>
+    <string name="login_login_btn">Login</string>
+    <string name="login_register_btn">Register</string>
+
 </resources>
