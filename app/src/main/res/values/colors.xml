@@ -9,4 +9,5 @@
     <color name="white">#fff</color>
     <color name="white_opacity_30">#4dffffff</color>
     <color name="white_opacity_60">#99ffffff</color>
+    <color name="red">#f41010</color>
 </resources>

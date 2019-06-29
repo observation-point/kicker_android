@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AppTextStyle"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:textSize="@dimen/text_size_18sp"
+            android:text="@string/app_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/blackDefenceBtn"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/ic_plus"
+            android:layout_marginTop="@dimen/margin_32dp"
+            android:layout_marginStart="@dimen/margin_32dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <View
+            android:id="@+id/topLine"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="@id/blackDefenceBtn"
+            app:layout_constraintBottom_toBottomOf="@id/blackDefenceBtn"
+            app:layout_constraintStart_toEndOf="@id/blackDefenceBtn"
+            app:layout_constraintEnd_toStartOf="@id/redAttackBtn"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/redAttackBtn"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/ic_plus_red"
+            android:layout_marginTop="@dimen/margin_32dp"
+            android:layout_marginEnd="@dimen/margin_32dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1dp"
+            app:civ_circle_background_color="@color/red"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+            android:id="@+id/rightLine"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/redAttackBtn"
+            app:layout_constraintBottom_toTopOf="@id/redDefenceBtn"
+            app:layout_constraintStart_toStartOf="@id/redAttackBtn"
+            app:layout_constraintEnd_toEndOf="@id/redAttackBtn"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/blackAttackBtn"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/ic_plus"
+            android:layout_marginBottom="@dimen/margin_32dp"
+            android:layout_marginStart="@dimen/margin_32dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+            android:id="@+id/bottomLine"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="@id/redDefenceBtn"
+            app:layout_constraintBottom_toBottomOf="@id/redDefenceBtn"
+            app:layout_constraintEnd_toStartOf="@id/redDefenceBtn"
+            app:layout_constraintStart_toEndOf="@id/blackAttackBtn"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/redDefenceBtn"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/ic_plus_red"
+            android:layout_marginBottom="@dimen/margin_32dp"
+            android:layout_marginEnd="@dimen/margin_32dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1dp"
+            app:civ_circle_background_color="@color/red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+            android:id="@+id/leftLine"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/blackDefenceBtn"
+            app:layout_constraintBottom_toTopOf="@id/blackAttackBtn"
+            app:layout_constraintStart_toStartOf="@id/blackAttackBtn"
+            app:layout_constraintEnd_toEndOf="@id/blackAttackBtn"/>
+
+    <View
+            android:id="@+id/middleLine"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="@id/leftLine"
+            app:layout_constraintEnd_toEndOf="@id/rightLine"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+            android:id="@+id/blackTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_32dp"
+            style="@style/AppTextStyle"
+            android:textSize="64sp"
+            app:layout_constraintStart_toStartOf="@id/leftLine"
+            app:layout_constraintEnd_toEndOf="@id/rightLine"
+            app:layout_constraintBottom_toTopOf="@id/middleLine"
+            tools:text="0"
+    />
+
+    <TextView
+            android:id="@+id/redTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32dp"
+            style="@style/AppTextStyle"
+            android:textSize="64sp"
+            android:textColor="@color/red"
+            app:layout_constraintStart_toStartOf="@id/leftLine"
+            app:layout_constraintEnd_toEndOf="@id/rightLine"
+            app:layout_constraintTop_toBottomOf="@id/timeMatch"
+            tools:text="0"/>
+
+    <TextView
+            android:id="@+id/timeMatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            style="@style/AppTextStyle"
+            app:layout_constraintTop_toBottomOf="@id/middleLine"
+            app:layout_constraintStart_toStartOf="@id/leftLine"
+            app:layout_constraintEnd_toEndOf="@id/rightLine"
+            tools:text="19 : 20 : 32"/>
+
+    <TextView
+            android:id="@+id/blackDefenceUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AppTextStyle"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/blackDefenceBtn"
+            app:layout_constraintStart_toStartOf="@id/blackDefenceBtn"
+            app:layout_constraintEnd_toEndOf="@id/blackDefenceBtn"
+            tools:text="deziev"/>
+
+    <TextView
+            android:id="@+id/redAttackUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AppTextStyle"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/redAttackBtn"
+            app:layout_constraintStart_toStartOf="@id/redAttackBtn"
+            app:layout_constraintEnd_toEndOf="@id/redAttackBtn"
+            tools:text="Adil"/>
+
+    <TextView
+            android:id="@+id/redDefenceUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AppTextStyle"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/redDefenceBtn"
+            app:layout_constraintStart_toStartOf="@id/redDefenceBtn"
+            app:layout_constraintEnd_toEndOf="@id/redDefenceBtn"
+            tools:text="imashtakov"/>
+
+    <TextView
+            android:id="@+id/blackAttackUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AppTextStyle"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/blackAttackBtn"
+            app:layout_constraintStart_toStartOf="@id/blackAttackBtn"
+            app:layout_constraintEnd_toEndOf="@id/blackAttackBtn"
+            tools:text="Ром4Н"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
