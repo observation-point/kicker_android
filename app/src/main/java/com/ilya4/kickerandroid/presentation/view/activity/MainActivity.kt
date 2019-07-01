@@ -17,5 +17,6 @@ class MainActivity : BaseActivity(), AMainMvpView {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        presenter.init()
     }
 }

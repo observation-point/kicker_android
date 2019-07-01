@@ -5,7 +5,7 @@ import com.ilya4.kickerandroid.data.io.model.AsyncData
 
 import com.ilya4.kickerandroid.data.io.model.RestApi
 import com.ilya4.kickerandroid.data.repository.SettingsDataSource
-import com.ilya4.kickerandroid.domain.entity.GameStateResponse
+import com.ilya4.kickerandroid.domain.entity.game.state.GameStateResponse
 import com.ilya4.kickerandroid.domain.entity.RestError
 import timber.log.Timber
 import java.io.IOException

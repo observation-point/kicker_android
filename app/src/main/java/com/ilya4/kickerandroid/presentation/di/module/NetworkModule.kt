@@ -30,7 +30,7 @@ class NetworkModule {
     fun provideRestApi(gson: Gson, client: OkHttpClient) : RestApi {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create(gson))
-            .baseUrl("")
+            .baseUrl("https://kicker.aventica.site/api/")
             .client(client)
             .build()
             .create(RestApi::class.java)

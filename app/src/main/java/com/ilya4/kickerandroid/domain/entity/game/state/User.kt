@@ -1,4 +1,4 @@
-package com.ilya4.kickerandroid.domain.entity
+package com.ilya4.kickerandroid.domain.entity.game.state
 
 import com.google.gson.annotations.SerializedName
 
