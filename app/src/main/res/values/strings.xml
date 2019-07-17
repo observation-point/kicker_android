@@ -10,4 +10,7 @@
     <string name="login_login_btn">Login</string>
     <string name="login_register_btn">Register</string>
 
+    <string name="st_lefttab_default_text">Left Tab</string>
+    <string name="st_righttab_default_text">Right Tab</string>
+
 </resources>
